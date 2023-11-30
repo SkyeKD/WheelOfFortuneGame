@@ -1,0 +1,34 @@
+.App {
+    text-align: center;
+  }
+  
+  .left-column {
+    float: left;
+    margin-top: 60px;
+    padding-left: 20px;
+  }
+  
+  .left-column a {
+    display: block;
+    font-size: 18px;
+    color: blue;
+    margin-bottom: 10px;
+    text-decoration: none;
+  }
+  
+  .game-part {
+    margin-left: 80px; /* 调整左列宽度后的 margin */
+  }
+  
+  .form-container {
+    margin-top: 20px;
+    margin-left:120px
+  }
+  
+  .bottom-button {
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+  
+  /* 其他样式根据需要添加 */
+  

@@ -100,7 +100,6 @@ function Game() {
             setInfo("It is not a letter!!!")
         }
         if (newHiddenPhrase.join('') === phrase) {
-            setScore(score + 30);
             // setCurrentTimestamp(Date.now());
             setInfo("Congratulations!");
             setIsGameOver(true);

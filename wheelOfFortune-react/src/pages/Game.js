@@ -112,7 +112,8 @@ function Game() {
         setPhrase(newPhrase);
         setInfo('');
         setHiddenPhrase(getHiddenPhrase(newPhrase));
-        setScore(0)
+        setScore(0);
+        setSubmittedLetters([])
     };
     // handle with the replay button
     const handleReplayClick = () => {
@@ -195,8 +196,9 @@ function Game() {
                     {isGameOver ? (
                         <h1 style={{ color: 'red' }}>Game Over</h1>
                     ) : (
-                        <div style={{ fontSize: '30px', color: 'purple' }}>Score: {score}</div>
+                        <p ></p>
                     )}
+                    <div style={{ fontSize: '30px', color: 'purple' }}>Score: {score}</div>
                 </div>
                 <div className="form-container">
                     <Form onSubmit={handleFormSubmit} />
@@ -213,7 +215,6 @@ function Game() {
                 onClose={() => {
                     
                     setIsGameOver(false);
-                    setScore(0)
                     initializeGame()
                 }}
                 onSave={handleSaveRecord}

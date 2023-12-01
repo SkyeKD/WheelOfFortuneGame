@@ -20,8 +20,6 @@ function Scores() {
         }
       });
 
-      console.log(response.data);
-      console.log(response.data[0].name)
       return response.data[0].name || '';
     } catch (error) {
       console.error('Error fetching username:', error);
@@ -45,7 +43,6 @@ function Scores() {
 
         setRecords(updatedRecords);
         setLoading(false);
-        console.log("updatedRecords", updatedRecords);
       })
       .catch(error => {
         setError(error.message);

@@ -19,8 +19,6 @@ function StartPage() {
         event.preventDefault();
 
         // do whatever on submit
-        console.log("submitted")
-        console.log(username)
         const postData = {
             googleId: localStorage.getItem("googleId"),
             name: username
@@ -28,7 +26,6 @@ function StartPage() {
 
         try {
             const response = await axios.post('https://wheeloffortune-game.wl.r.appspot.com/user/saveUserRecord', postData);
-            console.log('Response:', response.data);
         } catch (error) {
             console.error('Error posting data:', error);
         }
@@ -46,7 +43,6 @@ function StartPage() {
     };
     // handle the input
     const handleInputChange = (e) => {
-        console.log("e.target.value", e.target.value)
         setUsername(e.target.value);
     };
 

@@ -86,7 +86,6 @@ function Game() {
                     newHiddenPhrase[i] = phrase[i];
                     setHiddenPhrase(newHiddenPhrase);
                 }
-                console.log(i, "phrase", phrase, "hidden", hiddenPhrase)
             }
 
             if (!flag) {
@@ -128,7 +127,6 @@ function Game() {
     };
     //handlwe with the save
     const handleSaveRecord = () => {
-        console.log("save record")
         setIsGameOver(false);
         saveGameRecord();
         initializeGame();
@@ -144,7 +142,6 @@ function Game() {
 
         try {
             const response = await axios.post('https://wheeloffortune-game.wl.r.appspot.com/game/saveGameRecord', postData);
-            console.log('Response:', response.data);
 
         } catch (error) {
             console.error('Error posting data:', error);

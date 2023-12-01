@@ -28,7 +28,6 @@ function LoginForm({ LoginEvent }) {
         signInWithRedirect(auth, provider)
             .then((result) => {
                 // User signed in
-                console.log(result.user);
                 setLoggedUser(result.user)
 
             }).catch((error) => {
@@ -51,16 +50,12 @@ function LoginForm({ LoginEvent }) {
         auth.onAuthStateChanged(user => {
             if (user) {
                 // User is signed in.
-                console.log("User is signed in:", user);
-
-
                 setLoggedUser(user);
                 updateGoogleID(user.email);
                 localStorage.setItem("googleId",user.email)
 
             } else {
                 // No user is signed in.
-                console.log("No user is signed in.");
             }
             LoginEvent(user);
         });

@@ -17,11 +17,9 @@ function Profile() {
 
   //delete the record by id
   const handleDelete = (id) => {
-    console.log(id)
     axios.delete('https://wheeloffortune-game.wl.r.appspot.com/game/deleteGameRecord/' + id)
       .then(response => {
         displayByGoogleId();
-        console.log("delete", response)
       })
       .catch(error => {
         setError(error.message);
@@ -31,7 +29,6 @@ function Profile() {
   };
   //change the name 
   const handleChange = () => {
-    console.log(usernameChange)
     const postData = {
       googleId: googleID,
       name: usernameChange
@@ -39,7 +36,6 @@ function Profile() {
 
     try {
       const response = axios.post('https://wheeloffortune-game.wl.r.appspot.com/user/saveUserRecord', postData);
-      console.log('Response:', response.data);
     } catch (error) {
       console.error('Error posting data:', error);
     }
@@ -53,8 +49,6 @@ function Profile() {
         }
       });
 
-      console.log(response.data);
-      console.log(response.data[0].name)
       return response.data[0].name || '';
     } catch (error) {
       console.error('Error fetching username:', error);

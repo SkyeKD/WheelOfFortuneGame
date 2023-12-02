@@ -1,0 +1,9 @@
+com/example/demo/UserRecord/UserRecordApplication.class
+com/example/demo/UserRecord/UserRecordController.class
+com/example/demo/GameRecord/GameRecord.class
+com/example/demo/GameRecord/GameRecordApplication.class
+com/example/demo/WheelOfFortuneApplication.class
+com/example/demo/GameRecord/GameRecordRepository.class
+com/example/demo/UserRecord/UserRecordRepository.class
+com/example/demo/GameRecord/GameRecordController.class
+com/example/demo/UserRecord/UserRecord.class
